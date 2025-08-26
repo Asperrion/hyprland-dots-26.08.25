@@ -1,3 +1,3 @@
 #!/bin/bash
-weather=$(curl -s "https://wttr.in/uralskiy?format=%t+%c")
+weather=$(curl -s "https://wttr.in/YourCity?format=%t+%c")
 echo "$weather|"
