@@ -1,0 +1,38 @@
+@define-color foreground #def1ff;
+@define-color foreground-inactive #7496ad;
+@define-color background rgba(33, 33, 33, 0.7);
+
+* {
+    font-family: jetbrains mono nerd font;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    color: @foreground;
+    padding-left: 0.5em;
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+}
+
+#memory {
+    padding-left: 1em
+}
+
+#wireplumber,
+#battery,
+#idle_inhibitor,
+#language,
+#network,
+#bluetooth,
+#tray {
+    padding-right: 1em 
+}
