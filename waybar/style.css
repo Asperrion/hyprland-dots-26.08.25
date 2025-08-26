@@ -24,15 +24,16 @@
 }
 
 #memory {
-    padding-left: 1em
+    padding-left: 0.5em
 }
 
 #wireplumber,
-#battery,
-#idle_inhibitor,
 #language,
-#network,
-#bluetooth,
-#tray {
-    padding-right: 1em 
+#network {
+   padding-right: 1em
+}
+
+#custom-shtdwn {
+    color: #b35252;
+    padding-right: 1em;
 }

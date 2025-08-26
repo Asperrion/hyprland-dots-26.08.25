@@ -4,9 +4,9 @@
     "height": 20,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "custom/platform-profile"],
-    "modules-center": ["memory", "clock"],
-    "modules-right": ["wireplumber", "hyprland/language", "idle_inhibitor", "network"],
+    "modules-left": ["hyprland/workspaces", "memory", "cpu"],
+    "modules-center": ["custom/weather","clock"],
+    "modules-right": ["custom/sound", "hyprland/language", "network", "custom/shtdwn"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -25,19 +25,24 @@
         }
     },
 
-    "clock": {
-	"interval": 1,
-        "format": "{:%d.%m.%Y | %H:%M:%S}"
+    "cpu": {
+	"format":"| \uf4bc {usage}%",
+	"interval":30
     },
 
-    "wireplumber": {
-        "format": "\udb81\udd7e",
+    "clock": {
+	"interval": 1,
+        "format": "{:%d.%m.%Y |  %H:%M:%S}"
+    },
+
+    "custom/sound": {
+        "format": "\udb81\udd7e  ",
 	"on-click": "pavucontrol"
     },
 
     "memory": {
         "interval": 30,
-        "format": "\uf4bc  {used:0.1f}G |"
+        "format": "\uefc5 {used:0.1f}Gb"
     },
 
     "network": {
@@ -55,11 +60,14 @@
         "format": "{short}"
     },
 
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "\udb80\udd76",
-            "deactivated": "\udb83\udfaa"
-        }
+    "custom/weather": {
+	"exec": "~/.config/waybar/weather.sh",
+	"interval": 1800,
+	"format": "{}"
+    },
+
+    "custom/shtdwn": {
+	"format": "\uf011",
+	"on-click": "shutdown now"
     }
 }
